@@ -8,6 +8,9 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { VariablesComponent } from './component/variables/variables.component';
 import { AtributosComponent } from './component/atributos/atributos.component';
 import { EstructuralesComponent } from './component/estructurales/estructurales.component';
+import { HttpComponent } from './component/http/http.component';
+
+import { MutantesService } from "./services/mutantes.service";
 
 @NgModule({
   declarations: [
@@ -15,14 +18,15 @@ import { EstructuralesComponent } from './component/estructurales/estructurales.
     NavbarComponent,
     VariablesComponent,
     AtributosComponent,
-    EstructuralesComponent
+    EstructuralesComponent,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [MutantesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
