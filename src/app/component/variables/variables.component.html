@@ -6,13 +6,18 @@
   <tr>
     <td>Nombre </td>
     <td>{{nombre | uppercase}}</td>
-
   </tr>
   <tr>
     <td>Nota </td>
     <td>{{nota + 100}}</td>
   </tr>
 </table>
+
 <button type="button" class="btn btn-primary"
+        [disabled]="nombre.length!=0"
         (click)="cambiarNombre()">Cambiar Nombre
 </button>
+<br>
+<br>
+<input type="text" class="form-control" placeholder="Escriba un nombre"
+        [(ngModel)]="nombre">
